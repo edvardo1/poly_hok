@@ -3,7 +3,7 @@ m = String.to_integer(arg)
 
 #values_per_pixel = 4
 
-p#rev = System.monotonic_time()
+#prev = System.monotonic_time()
 
 #result_gpu = PolyHok.new_gnx(dim*dim,4,{:s,32})
 
