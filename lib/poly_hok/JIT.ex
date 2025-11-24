@@ -11,7 +11,7 @@ defmodule JIT do
    # IO.inspect "Delta: #{inspect delta}"
 
     inf_types = JIT.infer_types(code,delta)
-    IO.inspect "inf_types function: #{inspect inf_types}"
+    #IO.inspect "inf_types function: #{inspect inf_types}"
     {:fn, _, [{:->, _ , [para,body]}] } = code
 
 
@@ -49,7 +49,7 @@ def compile_function({name,type}) do
          # IO.inspect "Type: #{inspect type}"
     #      IO.inspect "Call graph: #{inspect fun_graph}"
           inf_types = JIT.infer_types(fast,delta)
-        #  IO.inspect "inf_types: #{inspect inf_types}"
+         IO.inspect "inf_types function: #{inspect inf_types}"
           {:defd,_iinfo,[header,[body]]} = fast
           {fname, _, para} = header
 
