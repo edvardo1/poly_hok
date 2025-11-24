@@ -11,7 +11,7 @@ defmodule JIT do
    # IO.inspect "Delta: #{inspect delta}"
 
     inf_types = JIT.infer_types(code,delta)
-   # IO.inspect "inf_types: #{inspect inf_types}"
+    IO.inspect "inf_types function: #{inspect inf_types}"
     {:fn, _, [{:->, _ , [para,body]}] } = code
 
 
