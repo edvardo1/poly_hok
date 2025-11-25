@@ -49,9 +49,9 @@ def compile_function({name,type}) do
          # IO.inspect "Type: #{inspect type}"
     #      IO.inspect "Call graph: #{inspect fun_graph}"
           inf_types = JIT.infer_types(fast,delta)
-         IO.inspect "inf_types function: #{inspect inf_types}"
+        # IO.inspect "inf_types function: #{inspect inf_types}"
           {:defd,_iinfo,[header,[body]]} = fast
-          IO.inspect body
+        #  IO.inspect body
           {fname, _, para} = header
 
           param_list = para
