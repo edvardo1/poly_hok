@@ -51,6 +51,7 @@ def compile_function({name,type}) do
           inf_types = JIT.infer_types(fast,delta)
          IO.inspect "inf_types function: #{inspect inf_types}"
           {:defd,_iinfo,[header,[body]]} = fast
+          IO.inpect body
           {fname, _, para} = header
 
           param_list = para
