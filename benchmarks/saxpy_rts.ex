@@ -70,7 +70,6 @@ _result = PolyHok.get_gnx(ref3)
 
 #result_ = PolyHok.get_gnx(ref_3)
 
-PolyHok.end_hok
 
 next = System.monotonic_time()
 IO.puts "PolyHok\t#{n}\t#{System.convert_time_unit(next-prev,:native,:millisecond)}"
