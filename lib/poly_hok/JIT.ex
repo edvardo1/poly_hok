@@ -45,11 +45,11 @@ def compile_function({name,type}) do
     nil -> [""]
     {fast,fun_graph} ->
           delta = gen_delta_from_type(fast,type)
-         IO.inspect "Delta: #{inspect delta}"
+         #IO.inspect "Delta: #{inspect delta}"
          # IO.inspect "Type: #{inspect type}"
     #      IO.inspect "Call graph: #{inspect fun_graph}"
           inf_types = JIT.infer_types(fast,delta)
-         IO.inspect "inf_types function: #{inspect inf_types}"
+         #IO.inspect "inf_types function: #{inspect inf_types}"
           {:defd,_iinfo,[header,[body]]} = fast
         #  IO.inspect body
           {fname, _, para} = header
